@@ -5,9 +5,45 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.btn {
+
+  transition: all 0.2s;
+  padding: 0px;
+  
+}
+
+.nav-link {
+  
+ 
+  transition: transform .2s; /* Animation */
+ 
+  
+}
+
+.nav-link:hover {
+
+  color: blueviolet;
+  text-decoration: underline;
+  transform: scale(1.5); 
+}
+
+.login:hover {
+
+  /* transition: all 0.2s; */
+  /* padding: 10px;  */
+  color: blueviolet;
+  transform: scale(1.5); 
+  
+  
+  
+  
 }
