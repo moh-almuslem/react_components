@@ -1,6 +1,6 @@
 import logo from './image/logo.png'
-import Background from './image/bottom.png'
-function LogintScreen() {
+
+function LoginScreen() {
 
     return (
         <div className="container" style={{"margin-top": "5em", "max-width": "75em"}}>
@@ -42,4 +42,4 @@ function LogintScreen() {
     )
 }
 
-export default LogintScreen;
+export default LoginScreen;

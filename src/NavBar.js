@@ -15,7 +15,7 @@ function NavBar(props) {
       function() {
             setState(         
                 {
-                    // Usee spread syntax to copy a new blank object
+                    // Use spread syntax to copy a new blank object
                   ...{}, 
                     //Overwrite with new key-value pair, where the key is the current path
                   [props.path]: 'active'
@@ -30,13 +30,15 @@ function NavBar(props) {
       <div className="container">
         <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           <Link to="/" className="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-          <img src={logo} width="100px" />
+            <img src={logo} width="100px" />
           </Link>
   
           <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li className="nav-item"><Link to="/" className={`nav-link ${state['/']}`}>Home</Link></li>
-            <li className="nav-item"><Link to="/about" className={`nav-link ${state['/about']}`}>About</Link></li>
-            <li className="nav-item"><Link to="/contact" className={`nav-link ${state['/contact']}`}>Contact</Link></li>
+              <ul className='nav nav-pills'>
+              <li className="nav-item"><Link to="/" className={`nav-link ${state['/']}`}>Home</Link></li>
+              <li className="nav-item"><Link to="/about" className={`nav-link ${state['/about']}`}>About</Link></li>
+              <li className="nav-item"><Link to="/contact" className={`nav-link ${state['/contact']}`}>Contact</Link></li>
+            </ul>
           </ul>
   
           <div className="text-end">

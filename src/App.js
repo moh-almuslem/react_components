@@ -4,7 +4,7 @@ import MainScreen from "./MainScreen";
 import RegistrationScreen from './RegistrationScreen'
 import AboutScreen from "./AboutScreen";
 import ContactScreen from "./ContactScreen";
-import LogintScreen from "./LoginScreen";
+import LoginScreen from "./LoginScreen";
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
                  <LayoutRoute path="/register" exact={true} component={RegistrationScreen} />
                  <LayoutRoute path="/about" exact={true} component={AboutScreen} />
                  <LayoutRoute path="/contact" exact={true} component={ContactScreen} />
-                 <LayoutRoute path="/login" exact={true} component={LogintScreen} />
+                 <LayoutRoute path="/login" exact={true} component={LoginScreen} />
             </Switch>
         </BrowserRouter>
 

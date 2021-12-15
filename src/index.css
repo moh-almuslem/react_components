@@ -47,3 +47,7 @@ code {
   
   
 }
+
+.nav-pills .nav-link.active {
+  background-color:rgb(192, 130, 216);
+}
