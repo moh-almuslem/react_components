@@ -108,7 +108,7 @@ function RegistrationScreen() {
     return (
         <div className="container" style={{"margin-top": "5em", "max-width": "40em"}}>
             
-            <h1>Register your Interest</h1>
+            <h1>Register</h1>
             <br/>
 
             <label>Enter your firstname *</label>

@@ -34,10 +34,12 @@ function NavBar(props) {
           </Link>
   
           <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <ul className='nav nav-pills'>
+            <ul className='nav nav-pills'>
               <li className="nav-item"><Link to="/" className={`nav-link ${state['/']}`}>Home</Link></li>
+              <li className="nav-item"><Link to="/photosession" className={`nav-link ${state['/photosession']}`}>Individual Photosession</Link></li>
               <li className="nav-item"><Link to="/about" className={`nav-link ${state['/about']}`}>About</Link></li>
               <li className="nav-item"><Link to="/contact" className={`nav-link ${state['/contact']}`}>Contact</Link></li>
+
             </ul>
           </ul>
   

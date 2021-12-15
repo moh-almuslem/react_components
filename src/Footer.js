@@ -32,6 +32,7 @@ function Footer(props) {
   <footer className="py-3 my-4">
     <ul className="nav justify-content-center border-bottom pb-3 mb-3">
       <li className="nav-item"><Link to="/" className={`nav-link ${state['/']}`}>Home</Link></li>
+      <li className="nav-item"><Link to="/photosession" className={`nav-link ${state['/photosession']}`}>Individual Photosession</Link></li>
       <li className="nav-item"><Link to="/about" className={`nav-link ${state['/about']}`}>About</Link></li>
       <li className="nav-item"><Link to="/contact" className={`nav-link ${state['/contact']}`}>Contact</Link></li>
     </ul>

@@ -32,14 +32,15 @@ code {
 
   color: blueviolet;
   text-decoration: underline;
-  transform: scale(1.5); 
+  transform: scale(1.2); 
   border-radius: 20px;
 }
 
 .login:hover {
 
   color: blueviolet;
-  transform: scale(1.5);   
+  transform: scale(1.5);
+     
   
 }
 
@@ -47,3 +48,14 @@ code {
   background-color:rgb(192, 130, 216);
   border-radius: 20px;
 }
+
+/* .logo{
+
+  /* position: absolute; */
+    /* left: 50%; */
+    /* margin-left: auto;   
+    /* display: block; */
+    /* position:static; */
+  
+
+/* }// */ 

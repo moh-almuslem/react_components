@@ -5,10 +5,10 @@ function MainScreen() {
   return (
     <div>
       <Hero 
-          title="Our Company" 
-          description="something" 
-          btnLabelOne="button One" 
-          btnLabelTwo="Second btn" 
+          title="Photography Group" 
+          description="Photography is an austere and blazing poetry of the real" 
+          btnLabelOne="Homepage" 
+          btnLabelTwo="Know more" 
           />
 
          
