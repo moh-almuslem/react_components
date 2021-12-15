@@ -18,14 +18,13 @@ code {
 
   transition: all 0.2s;
   padding: 0px;
+  border-radius: 20px;
   
 }
 
 .nav-link {
   
- 
   transition: transform .2s; /* Animation */
- 
   
 }
 
@@ -34,20 +33,17 @@ code {
   color: blueviolet;
   text-decoration: underline;
   transform: scale(1.5); 
+  border-radius: 20px;
 }
 
 .login:hover {
 
-  /* transition: all 0.2s; */
-  /* padding: 10px;  */
   color: blueviolet;
-  transform: scale(1.5); 
-  
-  
-  
+  transform: scale(1.5);   
   
 }
 
 .nav-pills .nav-link.active {
   background-color:rgb(192, 130, 216);
+  border-radius: 20px;
 }
