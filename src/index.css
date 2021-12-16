@@ -5,8 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color:ivory;
+
+  padding: 0; margin: 0; 
+  background: ivory url(./image/golddots.png) top  repeat-x; 
+    font-family: "Cera Pro", Georgia, Serif; width:100%
+  
+  
   
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -18,7 +26,7 @@ code {
 
   transition: all 0.2s;
   padding: 0px;
-  border-radius: 20px;
+  border-radius: 8px;
   
 }
 
@@ -33,7 +41,8 @@ code {
   color: blueviolet;
   text-decoration: underline;
   transform: scale(1.2); 
-  border-radius: 20px;
+  border-radius: 8px;
+  transition: all 1.5s;
 }
 
 .login:hover {
@@ -45,17 +54,153 @@ code {
 }
 
 .nav-pills .nav-link.active {
-  background-color:rgb(192, 130, 216);
-  border-radius: 20px;
+  background-color:#d1b691;
+  border-radius: 8px;
 }
 
-/* .logo{
 
-  /* position: absolute; */
-    /* left: 50%; */
-    /* margin-left: auto;   
-    /* display: block; */
-    /* position:static; */
-  
 
-/* }// */ 
+
+/* Font-family: Verdana, Cera Pro, Grayscale-signature. Цвета: #BB9253, #D09747, #FFFBF5, #740930, #840B57, #620138
+text-color: # BB9253 */
+
+
+.bg {top:0; width:1000px;height: 100%;background-color: white; display:block;
+  margin-left: auto; margin-right: auto; margin-top: 50px; box-shadow: 5px 5px 5px #f5daaf; }
+h1, h2, h3, h4, h5, h6 {font-family:Verdana, Tahoma, sans-serif; letter-spacing: 5px;color: goldenrod; text-align: center; padding: 10px; font-style:normal;}
+ul { list-style-type: disc;list-style-position: inside;text-align: center;}
+ul li {color: #d1b691; size: 60px; font-family: Verdana, Geneva, Tahoma, sans-serif; padding:15px; margin:0px; }
+
+.w3-image{max-width:100%;height:500px}
+.navbar{position:fixed;z-index:1; float:left; background-color:white; font-size:12px;width:100%; color:goldenrod; border-style:double; border-left:hidden; border-right:hidden}
+.nav_bar {padding:10px;display:block;}
+.nav_button {display:inline-block;padding:8px 16px;vertical-align:top;overflow:hidden;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap;}
+.nav_buttonlogo {display:inline-block;padding:0;vertical-align:top;overflow:hidden;text-decoration:none;color:goldenrod;text-align:left;cursor:pointer;white-space:nowrap;}
+/* .nav_icon{display:inline-block;padding:8px 6px;vertical-align:top;overflow:hidden;text-decoration:none;color:goldenrod;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap;} */
+.nav_small {float:right;display: block; }
+.nav_small a:link {color: grey;}
+.nav_small a:visited {color: grey}
+.nav_small a:hover {color: black}
+.nav_small a:active {color: #d1b691;}
+.bg table {width :300 px; text-align: center; margin: auto; padding: 0; color: #d1b691;}
+.bg th, td {padding: 15px;text-align:center;border: 2px solid #d1b691; border-radius:8px;}
+.color {background-color:#d1b691; color:white;}
+.economy{background-color:#fcf8df; color:#94846a;}
+.business{background-color:#f5daaf; color:#94846a;}
+.business_{background-color:#cda15a; color:#674c21;}
+.bg img {display: block;margin-left: auto;margin-right: auto; overflow: hidden; width: 100% ;}
+.button {
+background-color: white; 
+color: maroon; 
+border: 2px solid #cda15a; border-radius:8px; padding: 16px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;transition-duration: 0.4s;cursor: pointer;}
+
+.button:hover {
+background-color:#740930;
+color: white;
+}
+button.review {
+background-color: white; 
+color: goldenrod; 
+border: 2px solid #cda15a; border-radius:8px; padding: 16px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;transition-duration: 0.4s;cursor: pointer;}
+
+button.review:hover {
+background-color:#d1b691;
+color: white;
+}
+
+table.review {text-align: top; margin: o; padding: 0; color: #d19191; background-color: ivory;}  
+table.review th, td {width:200px;padding:0;text-align:center; border:0;}
+
+table.viewall  {width :700px; text-align: top center; margin:auto; padding:10px; border: 2px solid #d1b691; border-radius:8px; color: #d1b691;}
+table.viewall th, td {padding: 15px;text-align:center;vertical-align:top;}
+
+.shadow {
+box-shadow: 0 0 0 1px #ccc,
+0 -20px 15px -5px #FBC16A,
+20px 0 15px -5px #cda15a,
+0 20px 15px -5px #cda15a,
+-20px 0 15px -5px #F4F171;
+}
+.shadow:hover {
+box-shadow: 0 0 0 1px #ccc,
+0 -20px 10px -5px white,
+20px 0 10px -5px #FBC16A,
+0 20px 10px -5px #F4F171,
+-20px 0 10px -5px white;	
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+transition: all 0.5s ease;
+}
+
+
+.footer-basic {
+padding:40px 0;
+background-color:#f5daaf;
+color:#4b4c4d;
+color:goldenrod; border-style:double; border-left:hidden; border-right:hidden;}
+
+.footer-basic ul {
+padding:0;
+list-style:none;
+text-align:center;
+font-size:18px;
+line-height:1.6;
+margin-bottom:0;
+}
+
+.footer-basic li {
+padding:0 10px;
+}
+
+.footer-basic ul a {
+color:inherit;
+text-decoration:none;
+opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+opacity:1;
+}
+
+.footer-basic .social {
+text-align:center;
+padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+font-size:24px;
+width:40px;
+height:40px;
+line-height:40px;
+display:inline-block;
+text-align:center;
+margin:0 8px;
+color:inherit;
+opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+opacity:0.9;
+}
+
+.list-inline { color:white;
+padding-left: 0;
+list-style: none;
+}
+
+.list-inline-item { color:brown;
+display: inline-block;
+}
+
+.list-inline-item:not(:last-child) {
+margin-right: 0.5rem;
+}
+.social img {padding: 0; margin: 0;}
+
+.footer-basic .copyright {
+margin-top:15px;
+text-align:center;
+font-size:13px;
+color: #cda15a;
+margin-bottom:0;}
+

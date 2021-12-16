@@ -10,9 +10,9 @@ function MainScreen() {
           btnLabelOne="Homepage" 
           btnLabelTwo="Know more" 
           />
-
-         
     </div>
+
+    
   );
 }
 
