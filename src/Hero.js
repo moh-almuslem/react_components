@@ -12,9 +12,9 @@ function Hero(props) {
 
     return(
       
-  
+  <div className='bg'>
   <div className="px-4 py-5 my-5 text-center">
-    <img src={logo} alt="logo" width="264" />
+    <img src={logo} alt="logo" width="100" />
     <br/>
          <img src={pict} width="1200px"/>
          <br/>
@@ -51,7 +51,8 @@ function Hero(props) {
       <tr>
       <td colspan="2"><center>What people say ...</center></td>
      
-      <td colspan="2"><Link to="https://www.google.com/maps/place"><button className="review">find out more</button></Link></td>
+      <td colspan="2"><Link to="https://www.google.com/maps/place">
+        <button className="review">find out more</button></Link></td>
       </tr>
       <tr>
       <td colspan="2"><img src={t7} /></td>
@@ -63,7 +64,7 @@ function Hero(props) {
   </div>
   
   
-  
+  </div>
 
 
 

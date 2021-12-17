@@ -21,6 +21,7 @@ function ProfileScreen() {
     }
     else {
         return (
+            <div className='bg' style={{"height":"1000px", "width": "1000px"}}>
             <div>
                 <div className="container py-5"  style={{"margin-top": "5em", "max-width": "75em"}}>
                     <h1 style={{"color": "Brown","font-size":"70px","fontFamily":"Cooper Black"}}><b>My Profile</b></h1>
@@ -33,10 +34,12 @@ function ProfileScreen() {
                             <li style={{"color":"black"}}><b>{avatar}</b></li>
                         </ul>
                     </div>
-                    
+                    <center>
                     <button onClick={logout}  className="review"> Log out</button>
+                    </center>
                 </div>  
                 </div>
+            </div>
             </div>
         )
     }

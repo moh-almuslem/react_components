@@ -4,12 +4,12 @@ function BookingScreen() {
 
     return (
         
-        <div className="container" style={{"margin-top": "5em", "max-width": "75em"}}>
+        <div className="table table-bordered" className="bg" style={{"height":"1000px", "padding":"10px"}}>
         
 
         
 
-        <table class="table table-bordered">
+        <table>
   <thead>
     <tr>
         <th scope="col">Photosession Type</th>
@@ -19,12 +19,12 @@ function BookingScreen() {
   </thead>
   <tbody>
     <tr>
-    <th scope="row">MATERNITY PHOTOSHOOT</th>
+    <th scope="row table table-bordered" >MATERNITY PHOTOSHOOT</th>
       <td>100000</td>
       <td>
-        <div class="form-check form-switch" style={{"margin-left": "75px"}}>
-         <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-            <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+        <div className="form-check form-switch" style={{"margin-left": "75px"}}>
+         <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+            <label className="form-check-label" for="flexSwitchCheckDefault"></label>
         </div>
       </td>
     
@@ -33,9 +33,9 @@ function BookingScreen() {
         <th scope="row">NEWBORN PHOTOSHOOT</th>
       <td>10000</td>
       <td>
-      <div class="form-check form-switch" style={{"margin-left": "75px"}}>
-         <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-            <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+      <div className="form-check form-switch" style={{"margin-left": "75px"}}>
+         <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+            <label className="form-check-label" for="flexSwitchCheckDefault"></label>
         </div>
       </td>
       
@@ -45,9 +45,9 @@ function BookingScreen() {
     <td>10000</td>
       <td>
 
-      <div class="form-check form-switch" style={{"margin-left": "75px"}}>
-         <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-            <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+      <div className="form-check form-switch" style={{"margin-left": "75px"}}>
+         <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+            <label className="form-check-label" for="flexSwitchCheckDefault"></label>
         </div>
       </td>
    
@@ -57,18 +57,19 @@ function BookingScreen() {
     <th scope="row">CAKESMASH PHOTOSHOOT</th>
     <td>10000</td>
       <td>
-      <div class="form-check form-switch" style={{"margin-left": "75px"}}>
-         <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-            <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+      <div className="form-check form-switch" style={{"margin-left": "75px"}}>
+         <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+            <label className="form-check-label" for="flexSwitchCheckDefault"></label>
         </div>
       </td>
     
     </tr>
   </tbody>
 </table>
-
-
+<br/>
+<center>
 <Link to="/"><button className="review">Book</button></Link>
+</center>
 </div>
     )
 }

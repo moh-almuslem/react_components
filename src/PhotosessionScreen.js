@@ -11,6 +11,7 @@ function PhotosessionScreen() {
 
     return(
 
+        <div className='bg'>
         <div className='container' style={{"margin-top": "5em", "max-width": "75em"}}>
             <br/>
             <img src={viewall} width="1440"/>
@@ -65,6 +66,8 @@ function PhotosessionScreen() {
                         </tr>
                 </tbody>
             </table>
+        </div>
+        <br/>
         </div>
         
     )
