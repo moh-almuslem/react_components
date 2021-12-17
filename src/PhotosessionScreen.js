@@ -15,6 +15,8 @@ function PhotosessionScreen() {
             <br/>
             <img src={viewall} width="1440"/>
             <br/>
+            <center><Link to="/book"><button class="button">BOOK YOUR PHOTOSESSION NOW!</button></Link></center>
+            <br/>
             <table className="viewall" cellpading="0" cellspacing="0" border-radius="8px" >
                     <tbody>
                         <tr>
@@ -64,6 +66,7 @@ function PhotosessionScreen() {
                 </tbody>
             </table>
         </div>
+        
     )
 }
 
