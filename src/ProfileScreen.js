@@ -55,6 +55,7 @@ function ProfileScreen() {
                     <center>
                     <button onClick={logout}  className="review"> Log out</button>
                     </center>
+                    <button onClick={updateUser}  className="review"> Update</button>
                 </div>  
                 </div>
             
