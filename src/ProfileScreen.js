@@ -21,12 +21,12 @@ function ProfileScreen() {
     }
     else {
         return (
-            <div className='bg' style={{"height":"1000px", "width": "1000px"}}>
+            <div className='bg' style={{"height":"1000px"}}>
             <div>
-                <div className="container py-5"  style={{"margin-top": "5em", "max-width": "75em"}}>
+               
                     <h1 style={{"color": "Brown","font-size":"70px","fontFamily":"Cooper Black"}}><b>My Profile</b></h1>
                     <div className='container'>
-                    <div>
+                    
                     <table class="table table-bordered">
  
   <tbody>
@@ -44,7 +44,7 @@ function ProfileScreen() {
     </tr>
     <tr>
       <th scope="row">Avatar</th>
-      <td colspan="2"> <p style={{"color":"black"}}><b>{avatar}</b></p></td>
+      <td colspan="2"><img src={avatar}/></td>
     </tr>
   </tbody>
 </table>
@@ -57,8 +57,8 @@ function ProfileScreen() {
                     </center>
                 </div>  
                 </div>
-            </div>
-            </div>
+            
+            
         )
     }
 }

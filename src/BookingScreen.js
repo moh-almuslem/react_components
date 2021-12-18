@@ -20,7 +20,7 @@ function BookingScreen() {
   <tbody>
     <tr>
     <th scope="row" >MATERNITY PHOTOSHOOT</th>
-      <td>100000</td>
+      <td>1000</td>
       <td>
         <div className="form-check form-switch" style={{"margin-left": "75px"}}>
          <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
@@ -31,7 +31,7 @@ function BookingScreen() {
     </tr>
     <tr>
         <th scope="row">NEWBORN PHOTOSHOOT</th>
-      <td>10000</td>
+      <td>1000</td>
       <td>
       <div className="form-check form-switch" style={{"margin-left": "75px"}}>
          <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
@@ -42,7 +42,7 @@ function BookingScreen() {
     </tr>
     <tr>
     <th scope="row">FAMILY PHOTO SHOOT</th>
-    <td>10000</td>
+    <td>1000</td>
       <td>
 
       <div className="form-check form-switch" style={{"margin-left": "75px"}}>
@@ -55,7 +55,7 @@ function BookingScreen() {
 
     <tr>
     <th scope="row">CAKESMASH PHOTOSHOOT</th>
-    <td>10000</td>
+    <td>1000</td>
       <td>
       <div className="form-check form-switch" style={{"margin-left": "75px"}}>
          <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
