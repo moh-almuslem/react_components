@@ -103,9 +103,12 @@ function LoginScreen() {
 
                 {
                     state !== "sending" && state !== "successful" &&
+                    <center>
                     <button 
                     onClick={login}
-                    className="btn btn-primary mb-3" type="button">Submit</button>
+                    className="review" type="button">Submit
+                    </button>
+                    </center>
                 }
 
                 { 

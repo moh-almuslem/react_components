@@ -174,13 +174,14 @@ function RegistrationScreen() {
 
             {
                 formState !== "loading" &&
-                <div>
+                <div><center>
                     <button 
                     onClick={registerUser}
-                    className="btn btn-primary"
+                    className="review"
                     style={{"padding": "10px", "font-size": "16px"}}>
                         Submit
                     </button><br/><br/>
+                    </center>
                 </div>
             }
 
