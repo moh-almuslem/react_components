@@ -27,13 +27,31 @@ function ProfileScreen() {
                     <h1 style={{"color": "Brown","font-size":"70px","fontFamily":"Cooper Black"}}><b>My Profile</b></h1>
                     <div className='container'>
                     <div>
-                        <ul>
-                            <li style={{"color":"black"}}><b>{firstName}</b></li>
-                            <li style={{"color":"black"}}><b>{lastName}</b></li>
-                            <li style={{"color":"black"}}><b>{email}</b></li>
-                            <li style={{"color":"black"}}><b>{avatar}</b></li>
-                        </ul>
+                    <table class="table table-bordered">
+ 
+  <tbody>
+    <tr>
+      <th scope="row">Firstname</th>
+      <td> <p style={{"color":"black"}}><b>{firstName}</b></p></td>
+    </tr>
+    <tr>
+      <th scope="row">Lastname</th>
+      <td><p style={{"color":"black"}}><b>{lastName}</b></p></td>
+    </tr>
+    <tr>
+      <th scope="row">Email</th>
+      <td colspan="2"> <p style={{"color":"black"}}><b>{email}</b></p></td>
+    </tr>
+    <tr>
+      <th scope="row">Avatar</th>
+      <td colspan="2"> <p style={{"color":"black"}}><b>{avatar}</b></p></td>
+    </tr>
+  </tbody>
+</table>
                     </div>
+
+
+                    <br/>
                     <center>
                     <button onClick={logout}  className="review"> Log out</button>
                     </center>
@@ -46,3 +64,6 @@ function ProfileScreen() {
 }
 
 export default ProfileScreen;
+
+
+
