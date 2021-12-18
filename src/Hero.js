@@ -14,7 +14,7 @@ function Hero(props) {
       
   <div className='bg'>
   <div className="px-4 py-5 my-5 text-center">
-    <img src={logo} alt="logo" width="100" />
+    <img src={logo} alt="logo" width="" />
     <br/>
          <img src={pict} width="1200px"/>
          <br/>

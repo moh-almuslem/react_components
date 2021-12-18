@@ -19,7 +19,7 @@ function BookingScreen() {
   </thead>
   <tbody>
     <tr>
-    <th scope="row table table-bordered" >MATERNITY PHOTOSHOOT</th>
+    <th scope="row" >MATERNITY PHOTOSHOOT</th>
       <td>100000</td>
       <td>
         <div className="form-check form-switch" style={{"margin-left": "75px"}}>
