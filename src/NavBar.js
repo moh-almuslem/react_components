@@ -33,7 +33,8 @@ function NavBar(props) {
   )
 
     return (
-      <header className="p-1 bg-dark text-white">
+      <header className="p-1 bg-light text-white">
+      <div className="navbar">
       <div className="container">
         <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           <Link to="/" className="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
@@ -67,12 +68,20 @@ function NavBar(props) {
                     <button type="button" className="btn btn-outline-light me-2"><Link to="/login" className={`nav-link ${state['/login']}`}>Login</Link></button>
                 </ul>
               }
+
+              { 
+                loggedIn === false &&
+                <ul className='nav nav-pills'>
+                    <button type="button" className="btn btn-outline-light me-2"><Link to="/test" className={`nav-link ${state['/update']}`}>Test</Link></button>
+                </ul>
+              }
               <ul className='nav nav-pills'>
                 <Link to="/profile" className={`nav-link ${state['/profile']}`}>Profile</Link>
               </ul>
               </ul>
           </div>
         </div>
+      </div>
       </div>
     </header>
     )

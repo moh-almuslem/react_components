@@ -9,6 +9,8 @@ import PhotosessionScreen from "./PhotosessionScreen";
 import BookingScreen from "./BookingScreen";
 
 import ProfileScreen from './ProfileScreen.js';
+
+import TestScreen from "./TestScreen";
 function App() {
 
     return(
@@ -25,6 +27,7 @@ function App() {
                  <LayoutRoute path="/book" exact={true} component={BookingScreen} />
                  <LayoutRoute path="/login" exact={true} component={LoginScreen} />
                 <LayoutRoute path="/profile" exact={true} component={ProfileScreen} />
+                <LayoutRoute path="/test" exact={true} component={TestScreen} />
             </Switch>
         </BrowserRouter>
 

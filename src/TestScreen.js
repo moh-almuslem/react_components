@@ -1,6 +1,21 @@
-import { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { Redirect } from 'react-router-dom';
+// Connect to the context (i.e, global state)
+import {UserContext} from './UserContext';
 
-function RegistrationScreen() {
+function ProfileScreen() {
+
+    const { firstName, lastName, email, avatar, updateUser } = useContext(UserContext);
+
+    function logout() {
+        updateUser(
+            {
+                ...{}
+            }
+        )
+        localStorage.clear()
+    }
+
 
     // formState: (1) initial, (2) loading, (3) validationFailed, (4) successful, (5) unsuccessful
     const [formState, setFormState] = useState("initial");
@@ -10,7 +25,7 @@ function RegistrationScreen() {
     let emailField;
     let passwordField;
     let phoneField;
-    let checkBox;
+
     let avatarInput;
 
     // FormData is a constructor for creating an object
@@ -32,8 +47,7 @@ function RegistrationScreen() {
             }
         );
     }
-
-    function registerUser() {
+    function updateUserInfo() {
 
         const errors = [];
         
@@ -50,9 +64,7 @@ function RegistrationScreen() {
         if( passwordField.value.length === 0 ) {
             errors.push("Please enter valid password");
         }
-        if( checkBox.checked === false ) {
-            errors.push("Please accept the terms & conditions");
-        }
+      
 
         // 1.1 If there are errors, set the state to "validationFailed"
         if(errors.length > 0) {
@@ -73,9 +85,9 @@ function RegistrationScreen() {
             formData.append('phoneNumber', phoneField.value);
 
             fetch(
-                `${process.env.REACT_APP_BACKEND}/user/register`,
+                `${process.env.REACT_APP_BACKEND}/user/update`,
                 {
-                    method: 'POST',
+                    method: 'PATCH',
                     body: formData
                 }
             )
@@ -104,14 +116,59 @@ function RegistrationScreen() {
         }
     }
 
-    // errorState 
-    return (
-        <div className='bg'>
-        <div className="container" style={{"margin-top": "5em", "max-width": "40em"}}>
-            
-            <h1>Register</h1>
-            <br/>
+    if (!localStorage.getItem('jsonwebtoken')) {
+        return (<Redirect to="/login" />)
+    }
+    else {
+        return (
+            <div className='bg' style={{"height":"1200px"}}>
+            <div>
+            <br/><br/>
+                    <h1 style={{"color": "Brown","font-size":"70px","fontFamily":"Cooper Black"}}><b>My Profile</b></h1>
+                    <div className='container'>
+                    
+                    <table className="viewall" >
+ 
+  {/* <tbody>  */}
+  
+    <tr>
+      <th scope="row">Firstname</th>
+      <td> <p style={{"color":"black"}}><b>{firstName}</b></p></td>
+     
+    </tr>
+    <tr>
+      <th scope="row">Lastname</th>
+      <td><p style={{"color":"black"}}><b>{lastName}</b></p></td>
+     
+    </tr>
 
+    <tr>
+      <th scope="row">Email</th>
+      <td > <p style={{"color":"black"}}><b>{email}</b></p></td>
+  
+    </tr>
+    <tr>
+      <th scope="row">Avatar</th>
+      <td ><img src={avatar}/></td>
+    
+    </tr>
+  {/* </tbody> */}
+</table>
+                    </div>
+
+
+                    <br/>
+                    <center>
+                    <button onClick={logout}  className="review" style={{"backgroundColor":"maroon", "color":"white"}}> Log out</button>
+                   
+                    <button onClick={updateUserInfo}  className="review"> Update</button>
+                    </center>
+                </div>
+                <br/>
+
+                <h1>UPDATE INFO</h1>
+            <br/>
+<div style={{"margin":"15px"}}>
             <label>Enter your firstname *</label>
             <input ref={
                 function(theInputElement) {
@@ -160,31 +217,21 @@ function RegistrationScreen() {
             className="field form-control" id="photo" name="file" 
             type="file" multiple="multiple"/>
 
-            <br/><br/>
-
-            <label>Do you agree to terms &amp; conditions? *</label>
-            <input ref={
-                function(thisCheckbox) {
-                    checkBox = thisCheckbox;
-                }
-            }
-            className="checkbox" name="termsConditions" type="checkbox" /> Yes
-
-            <br/><br/>
+           
 
 
-            {
+            {/* {
                 formState !== "loading" &&
                 <div><center>
                     <button 
-                    onClick={registerUser}
+                    onClick={updateUserInfo}
                     className="review"
                     style={{"padding": "10px", "font-size": "16px"}}>
-                        Submit
+                        update
                     </button><br/><br/>
                     </center>
                 </div>
-            }
+            } */}
 
             {
                 formState === "validationFailed" &&
@@ -205,12 +252,12 @@ function RegistrationScreen() {
 
             {
                 formState === "successful" &&
-                <div className="alert alert-success">You have  successfully created an account</div>
+                <div className="alert alert-success">You have a successfully updated your account</div>
             }
 
             {
                 formState === "unsuccessful" &&
-                <div className="alert alert-danger">An error occured. Please try again.</div>
+                <div className="alert alert-success">You have a successfully updated your account</div>
             }
 
             {
@@ -218,9 +265,21 @@ function RegistrationScreen() {
                 <p>Loading...</p>
             }
 
+
+
 </div>
-        </div>
-    )
+
+
+
+
+                </div>
+            
+            
+        )
+    }
 }
 
-export default RegistrationScreen;
+export default ProfileScreen;
+
+
+

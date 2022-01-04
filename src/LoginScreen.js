@@ -86,7 +86,8 @@ function LoginScreen() {
         )
     } else {
         return (
-            <div className="container" style={{maxWidth: 600 }}>
+            <div className='bg'>
+            <div className="container" style={{"height":"1000px", maxWidth: 600 }}>
 
                 <h1 className="py-5">Login</h1>
 
@@ -129,6 +130,7 @@ function LoginScreen() {
                     state === "sending" &&
                     <p>Loading...</p>
                 }
+            </div>
             </div>
         )
     }
