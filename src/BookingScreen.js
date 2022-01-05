@@ -10,7 +10,7 @@ function BookingScreen() {
   let maternityCheckBox;
   let newbornCheckBox;
   let familyCheckBox;
-  let cakemashCheckBox;
+  let cakesmashCheckBox;
 
   // FormData is a constructor for creating an object
   // that works like an HTML form element
@@ -43,8 +43,31 @@ function BookingScreen() {
 
     if (maternityCheckBox.checked=== false) {
       errors.push("Please choose at least one option");
-    }
-  
+    } else if (maternityCheckBox.checked=== true){
+
+      formState = setFormState("successful") 
+
+    }  
+    
+    if (newbornCheckBox.checked=== true){
+
+      formState = setFormState("successful") 
+    }  
+    
+    if (familyCheckBox.checked=== true){
+
+      formState = setFormState("successful") 
+    }  
+    
+     if (cakesmashCheckBox.checked=== true){
+
+      formState = setFormState("successful") 
+    }  
+
+    let string=""
+  for (string in errors){
+    string.fontcolor("black", errors[string])
+  }
 
     // 1.1 If there are errors, set the state to "validationFailed"
     if (errors.length > 0) {
@@ -104,89 +127,67 @@ function BookingScreen() {
 
       <div className="table table-bordered" className="bg" style={{ "height": "1000px", "padding": "10px" }}>
 
-<form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email"/>
-    </div>
-  </div>
-  <div class="form-group col-md-6">
-    <label for="inputAddress">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St"/>
-  </div>
-  <div class="form-group">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"/>
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCity">City</label>
-      <input type="text" class="form-control" id="inputCity"/>
-    </div>
-    <div class="form-group col-md-4">
-      <label for="inputState">State</label>
-      <select id="inputState" class="form-control">
-        <option selected>Choose...</option>
-        <option>...</option>
-      </select>
-    </div>
-    <div class="form-group col-md-2">
-      <label for="inputZip">Zip</label>
-      <input type="text" class="form-control" id="inputZip"/>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck"/>
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
-  </div>
+        
+<br/><br/><br/>
 
-</form>
-
-
-
-
+<table style={{"width":"600px"}}>
+  <thead>
+    <tr>
+      <th scope="col" style={{"width":"200px", "backgroundColor":"#FFFAE7" }}>Baby's Name (optional) </th>
+      <th scope="col" style={{"width":"200px", "backgroundColor":"#FFFAE7" }}>Baby's Birthday (optioanl)</th>
+      <th scope="col" style={{"width":"200px", "backgroundColor":"#FFFAE7" }}>Parent's Name (optional)</th>
+      <th scope="col" style={{"width":"200px", "backgroundColor":"#FFFAE7" }}>Date of Photosession</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">
+    <input type="email" className="form-control" id="exampleFormControlInput1"/>
+  </th>
+      <th><input type="email" className="form-control" id="exampleFormControlInput1"/></th>
+      <th><input type="email" className="form-control" id="exampleFormControlInput1"/></th>
+      <th><input type="email" className="form-control" id="exampleFormControlInput1"/></th>
+    </tr>
+  
+    
+  </tbody>
+</table >
 
 
       <br/>
 
 
-        <table>
+        <table style={{"width":"600px"}}>
+          
           <thead>
             <tr>
-              <th scope="col">Photosession Type</th>
-              <th scope="col">Price</th>
-              <th scope="col">Choose</th>
+              <th scope="col" style={{"width":"200px", "backgroundColor":"#FFFAE7" }}>PHOTOSESSION TYPE</th>
+              <th scope="col" style={{"width":"200px", "backgroundColor":"#FFFAE7" }}>PRICE</th>
+              <th scope="col" style={{"width":"200px", "backgroundColor":"#FFFAE7"}}>CHOOSE</th>
+              
             </tr>
           </thead>
           <tbody>
             <tr>
               <th scope="row" >MATERNITY PHOTOSHOOT</th>
-              <td>1000</td>
-              <td>
-                <div className="form-check form-switch" style={{ "margin-left": "75px" }}>
-                  <input ref={
-                    function (thisCheckbox) {
-                      maternityCheckBox = thisCheckbox;
-                    }
-                  }
-                    className="form-check-input" 
-                    type="checkbox" 
-                    role="switch" 
-                    id="flexSwitchCheckDefault" />
+              <th>1000</th>
+              <th>
+         
+                <div className="form-check form-switch" style={{ "margin-left": "75px"}}>
+                
+                  <input ref={function (thisCheckbox) {maternityCheckBox = thisCheckbox}} className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                  
                   <label className="form-check-label" for="flexSwitchCheckDefault"></label>
+                  
                 </div>
-              </td>
-
+               
+              </th>
+           
             </tr>
             <tr>
               <th scope="row">NEWBORN PHOTOSHOOT</th>
-              <td>1000</td>
-              <td>
+              <th>1000</th>
+              <th>
                 <div className="form-check form-switch" style={{ "margin-left": "75px" }}>
                   <input ref={
                     function (thisCheckbox) {
@@ -198,46 +199,46 @@ function BookingScreen() {
                     className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
                   <label className="form-check-label" for="flexSwitchCheckDefault"></label>
                 </div>
-              </td>
+              </th>
 
             </tr>
             <tr>
               <th scope="row">FAMILY PHOTO SHOOT</th>
-              <td>1000</td>
-              <td>
+              <th>1000</th>
+              <th>
 
                 <div className="form-check form-switch" style={{ "margin-left": "75px" }}>
                   <input
 
                     ref={
-                      function (familyCheckBox) {
-                        checkBox = familyCheckBox;
+                      function (thisCheckbox) {
+                        familyCheckBox = thisCheckbox;
                       }
                     }
 
                     className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
                   <label className="form-check-label" for="flexSwitchCheckDefault"></label>
                 </div>
-              </td>
+              </th>
 
             </tr>
 
             <tr>
               <th scope="row">CAKESMASH PHOTOSHOOT</th>
-              <td>1000</td>
-              <td>
+              <th>1000</th>
+              <th>
                 <div className="form-check form-switch" style={{ "margin-left": "75px" }}>
                   <input
 
                     ref={
-                      function (cakemashCheckBox) {
-                        checkBox = cakemashCheckBox;
+                      function (thisCheckbox) {
+                        cakesmashCheckBox = thisCheckbox;
                       }
                     }
                     className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
                   <label className="form-check-label" for="flexSwitchCheckDefault"></label>
                 </div>
-              </td>
+              </th>
 
             </tr>
           </tbody>
@@ -253,7 +254,7 @@ function BookingScreen() {
               onClick={bookingInfo}
               className="review"
               style={{ "padding": "10px", "font-size": "16px" }}>
-              Book
+              BOOK YOUR PHOTOSESSION
             </button><br /><br />
           </center>
           </div>
@@ -278,7 +279,7 @@ function BookingScreen() {
 
         {
           formState === "successful" &&
-          <div className="alert alert-success">You have successfully booked a Photosession</div>
+          <div className="alert alert-success">You have successfully booked a Photosession. <br/> If you want to modifiy your reservation, please contact us <Link to="/contact">here</Link>.</div>
         }
 
         {

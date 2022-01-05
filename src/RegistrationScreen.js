@@ -106,7 +106,7 @@ function RegistrationScreen() {
 
     // errorState 
     return (
-        <div className='bg'>
+        <div className='bg' style={{"height":"1000px"}}>
         <div className="container" style={{"margin-top": "5em", "max-width": "40em"}}>
             
             <h1>Register</h1>

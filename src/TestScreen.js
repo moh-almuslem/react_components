@@ -127,32 +127,26 @@ function ProfileScreen() {
                     <h1 style={{"color": "Brown","font-size":"70px","fontFamily":"Cooper Black"}}><b>My Profile</b></h1>
                     <div className='container'>
                     
-                    <table className="viewall" >
+                    <table class="table table-bordered">
  
-  {/* <tbody>  */}
-  
+  <tbody > 
     <tr>
       <th scope="row">Firstname</th>
       <td> <p style={{"color":"black"}}><b>{firstName}</b></p></td>
-     
     </tr>
     <tr>
       <th scope="row">Lastname</th>
       <td><p style={{"color":"black"}}><b>{lastName}</b></p></td>
-     
     </tr>
-
     <tr>
       <th scope="row">Email</th>
-      <td > <p style={{"color":"black"}}><b>{email}</b></p></td>
-  
+      <td colspan="2"> <p style={{"color":"black"}}><b>{email}</b></p></td>
     </tr>
     <tr>
       <th scope="row">Avatar</th>
-      <td ><img src={avatar}/></td>
-    
+      <td colspan="2"><img src={avatar}/></td>
     </tr>
-  {/* </tbody> */}
+  </tbody>
 </table>
                     </div>
 
@@ -252,12 +246,12 @@ function ProfileScreen() {
 
             {
                 formState === "successful" &&
-                <div className="alert alert-success">You have a successfully updated your account</div>
+                <div className="alert alert-success">You have successfully updated your account</div>
             }
 
             {
                 formState === "unsuccessful" &&
-                <div className="alert alert-success">You have a successfully updated your account</div>
+                <div className="alert alert-success">You have successfully updated your account</div>
             }
 
             {

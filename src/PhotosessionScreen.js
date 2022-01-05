@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
+import { Link, Redirect} from 'react-router-dom';
 import maternity from "./image/maternity.png"
 import newborn from "./image/newborn.png"
 import family from "./image/family.png"
@@ -8,6 +9,22 @@ import viewall from "./image/viewall.png"
 function PhotosessionScreen() {
 
 
+
+   function maternityLink(){
+    window.location.href = "https://pixieset.com/collection/?t=maternity";
+ }
+
+ function newbornLink(){
+    window.location.href = "https://pixieset.com/collection/index/?t=newborn&page=2";
+ }
+  
+ function familyLink(){
+    window.location.href = "https://pixieset.com/collection/index/?t=family&page=2";
+ }
+
+ function cakesmashLink(){
+    window.location.href = "https://pixieset.com/collection/index/?t=cake+smash&page=3";
+ }
 
     return(
 
@@ -23,9 +40,11 @@ function PhotosessionScreen() {
                         <tr>
                             <td>
                                 <h3>MATERNITY PHOTOSHOOT</h3>
-                                    <p>Text block ready for your content. Text block ready for your content</p>
+                                    <p>Pregnancy is a special journey in a women’s life that is both unique and magical, there is nothing like it in the world, indeed it is a memory that should be cherished forever. As maternity photographers, we’ve come to realize that a woman is at her most beautiful when she is pregnant, we see her body as a flourishing sculpture, the perfect subject for any photographer.</p>
                                 <br/>
-                                <Link to="/"><button className="review">find out more</button></Link>
+                                
+                               
+                            <button onClick= {maternityLink} className="review">find out more</button>
                             </td>
                             <td>
                                 <img src={maternity} width={512}/>
@@ -37,16 +56,16 @@ function PhotosessionScreen() {
                             </td>
                             <td>
                                 <h3>NEWBORN PHOTOSHOOT</h3>
-                                    <p>Text block ready for your content. Text block ready for your content</p>
+                                    <p>A cheerful and happy baby has got to be the cutest thing in the entire world. The first few days and months of a baby’s life are full of precious memories which make for the perfect baby portraits.</p>
                             <br/>
-                                <Link to="/"><button className="review">find out more</button></Link>
+                            <button onClick= {newbornLink} className="review">find out more</button>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <h3>FAMILY PHOTO SHOOT</h3>
-                                <p>Text block ready for your content. Text block ready for your content</p>
-                                <br/><Link to="/"><button className="review">find out more</button></Link>
+                                <p>Family photography is all about love, nostalgia and the small details that mean so much. No household is complete without that one family photograph which forever evokes fond memories and transports us back to a special chapter in our lives. We believe every family portrait tells a beautiful story, one that showcases the legacy, love and affection that is present in every family.</p>
+                                <button onClick= {familyLink} className="review">find out more</button>
                             </td>
                             <td>
                                 <img src={family} width={512}/>
@@ -59,9 +78,9 @@ function PhotosessionScreen() {
                             </td>
                             <td>
                                 <h3>CAKESMASH PHOTOSHOOT</h3>
-                                <p>Text block ready for your content. Text block ready for your content</p>
+                                <p>Every awesome mom and dad enjoy taking photos of their babies…after all, we all want to capture those special moments! So let’s take a sneak peek at one of the most important milestones in their life: baby’s first 12 months and their 1st birthday.</p>
                                 <br/>
-                                <Link to="/"><button className="review">find out more</button></Link>
+                                <button onClick= {cakesmashLink} className="review">find out more</button>
                             </td>
                         </tr>
                 </tbody>
@@ -72,5 +91,6 @@ function PhotosessionScreen() {
         
     )
 }
+
 
 export default PhotosessionScreen;

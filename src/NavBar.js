@@ -43,11 +43,11 @@ function NavBar(props) {
   
           <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <ul className='nav nav-pills'>
-              <li className="nav-item"><Link to="/" className={`nav-link ${state['/']}`}>Home</Link></li>
-              <li className="nav-item"><Link to="/photosession" className={`nav-link ${state['/photosession']}`}>Individual Photosession</Link></li>
-              <li className="nav-item"><Link to="/book" className={`nav-link ${state['/book']}`}>Book Photosession</Link></li>
-              <li className="nav-item"><Link to="/about" className={`nav-link ${state['/about']}`}>About</Link></li>
-              <li className="nav-item"><Link to="/contact" className={`nav-link ${state['/contact']}`}>Contact</Link></li>
+              <li className="nav-item"><Link to="/" className={`nav-link ${state['/']}`}>HOME</Link></li>
+              <li className="nav-item"><Link to="/photosession" className={`nav-link ${state['/photosession']}`}>INDIVIDUAL PHOTOSESSION</Link></li>
+              <li className="nav-item"><Link to="/book" className={`nav-link ${state['/book']}`}>BOOK PHOTOSESSION</Link></li>
+              <li className="nav-item"><Link to="/about" className={`nav-link ${state['/about']}`}>ABOUT</Link></li>
+              <li className="nav-item"><Link to="/contact" className={`nav-link ${state['/contact']}`}>CONTACT</Link></li>
             </ul>
           </ul>
   
@@ -59,24 +59,22 @@ function NavBar(props) {
                           { 
                 loggedIn === false &&
                 <ul className='nav nav-pills'>
-                    <button type="button" className="btn btn-outline-light me-2"><Link to="/register" className={`nav-link ${state['/register']}`}>Register</Link></button>
+                    {/* <button type="button" className="btn btn-outline-light me-2"><Link to="/register" className={`nav-link ${state['/register']}`}>REGISTER</Link></button> */}
+                    <li className="nav-item"><Link to="/register" className={`nav-link ${state['/register']}`}>REGISTER</Link></li>
                 </ul>
               }
               { 
                 loggedIn === false &&
                 <ul className='nav nav-pills'>
-                    <button type="button" className="btn btn-outline-light me-2"><Link to="/login" className={`nav-link ${state['/login']}`}>Login</Link></button>
+                    {/* <button type="button" className="btn btn-outline-light me-2"><Link to="/login" className={`nav-link ${state['/login']}`}>LOGIN</Link></button> */}
+                    <li className="nav-item"><Link to="/login" className={`nav-link ${state['/login']}`}>LOGIN</Link></li>
                 </ul>
               }
 
-              { 
-                loggedIn === false &&
-                <ul className='nav nav-pills'>
-                    <button type="button" className="btn btn-outline-light me-2"><Link to="/test" className={`nav-link ${state['/update']}`}>Test</Link></button>
-                </ul>
-              }
+             
               <ul className='nav nav-pills'>
-                <Link to="/profile" className={`nav-link ${state['/profile']}`}>Profile</Link>
+                {/* <Link to="/profile" className={`nav-link ${state['/profile']}`}>PROFILE</Link> */}
+                <li className="nav-item"><Link to="/profile" className={`nav-link ${state['/profile']}`}>PROFILE</Link></li>
               </ul>
               </ul>
           </div>

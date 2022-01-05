@@ -1,28 +1,142 @@
 import logo2 from "./image/logo2.png"
-function ContactScreen(){
+import contact from "./image/contact.jpeg"
+import { Link, Redirect } from 'react-router-dom';
+import { useState } from 'react';
+function ContactScreen() {
 
-    return(
+  const [formState, setFormState] = useState("initial");
 
-        <div className="bg" style={{"height": "1000px", "width":"1000px"}}>
-        <div className="container col-xxl-8 px-4 py-5">
-        <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
+
+  let checkBox;
+  let maternityCheckBox;
+  let newbornCheckBox;
+  let familyCheckBox;
+  let cakesmashCheckBox;
+
+  // FormData is a constructor for creating an object
+  // that works like an HTML form element
+  const formData = new FormData();
+
+  // errorsState is for tracking the validation errors
+  const [errorsState, setErrorsState] = useState([]);
+
+  // attachFile() will append to formData the avatar file
+  const attachFile = (evt) => {
+    // Create an array from the file attachments
+    const files = Array.from(evt.target.files);
+
+    // For each attachment, append the file to formData
+    files.forEach(
+      (fileAttachment, index) => {
+        formData.append(index, fileAttachment);
+      }
+    );
+  }
+
+
+
+  function sendMessage(){
+
+
+    // formState = setFormState("successful") 
+
+    alert("Message has been sent")
+
+  }
+
+  
+  return (
+
+    <div className="bg" style={{ "height": "1000px" }}>
+      <br /><br />
+      <h1 className="text-center">CONTACT US!</h1>
+      <img src={contact}  width="300" height="300" loading="lazy"></img>
+      <br />
+          
+        <form>
+          <table style={{ "width": "600px" }}>
+            <thead>
+              <tr>
+                <th scope="col" style={{ "width": "200px", "backgroundColor": "#FFFAE7" }}>YOUR EMAIL: </th>
+                <th scope="col" style={{ "width": "200px", "backgroundColor": "#FFFAE7" }}>YOUR MESSAGE:</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <input type="email" name="_replyto" />
+                </th>
+                <th><textarea name="message"></textarea></th>
+              </tr>
+
+
+            </tbody>
+          </table >
+          <br />
+          <center>
+           
+{
+          formState !== "loading" &&
+          <div><center>
+            <button
+              onClick={sendMessage}
+              className="review"
+              style={{ "padding": "10px", "font-size": "16px" }}>
+              SEND MESSAGE
+            </button><br /><br />
+          </center>
+          </div>
+        }
+
+        {
+          formState === "validationFailed" &&
+          <div className="alert alert-danger">
+
+            <ul>
+              {
+                errorsState.map(
+                  (error) => {
+                    return <li>{error}</li>
+                  }
+                )
+              }
+            </ul>
+
+          </div>
+        }
+
+        {
+          formState === "successful" &&
+          <div className="alert alert-success">Your message has been sent.</div>
+        }
+
+        {
+          formState === "unsuccessful" &&
+          <div className="alert alert-danger">An error occured. Please try again.</div>
+        }
+
+        {
+          formState === "loading" &&
+          <p>Loading...</p>
+        }
+
+
+
+          </center>
+        </form>
+      
+        <p className="lead" style={{ "color": "Brown", "font-size": "70px", "fontFamily": "Broadway" }} ><h2>We would love to hear from you!</h2></p>
+
+     
+      <center>
+
           <div className="col-10 col-sm-8 col-lg-6">
-            <img src={logo2} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"></img>
+            <img src={logo2}  width="400" height="150" loading="lazy"/>
           </div>
-          <div className="col-lg-6">
-            <h1 className="display-7 fw-bold lh-1 mb-3" style={{"color": "Brown","font-size":"70px","fontFamily":"Cooper Black"}  }>Contact Us!</h1>
-            <p className="lead" style={{"color": "Brown","font-size":"70px","fontFamily":"Broadway"}  } ><h2>We would love to hear from you!</h2></p>
-            <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-              <button type="button" className="review">Know more</button>
-              <br/>
-            
-              <button type="button" className="review">Feedback</button>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
-    )
+          </center>
+    </div>
+  )
 }
 
 export default ContactScreen;
